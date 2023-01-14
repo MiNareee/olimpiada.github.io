@@ -1,8 +1,8 @@
 ymaps.ready(init);
 function init(){
   let map=new ymaps.Map('map',{
-    center:[55.711050485646425,37.675793542226586],
-    zoom:16
+    center:[55.76, 37.64],
+    zoom:10
   });
    myGeoObject = new ymaps.GeoObject({
             // Описание геометрии.
