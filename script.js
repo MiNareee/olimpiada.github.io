@@ -25,15 +25,6 @@ function init(){
     
   });
   let placemark3= new ymaps.Placemark([55.75564064908507,37.63257850958312],{},{
-    
-  });
-  let control= mymap.controls.get('routePanelControl');
-  control.routePanel.state.set({
-    type: 'masstransit',
-    fromEnabled: false,
-    from: placemark,
-    toEnabled: true,
-    to:
   });
   map.geoObjects.add(placemark);
   map.geoObjects.add(placemark2);
