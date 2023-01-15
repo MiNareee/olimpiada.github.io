@@ -16,7 +16,6 @@ function init(){
     <div class='ballon_address'> г.Москва</div>
     <div class='ballon_contacts'> г.Москва</div>
     <a href ='tel:+79999999999'> +79999999999</a>
-    </div>
   
   
   `
