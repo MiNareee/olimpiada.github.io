@@ -10,8 +10,8 @@ ymaps.ready( function (){
   control.routePanel.state.set({
     type: 'masstransit',
     fromEnabled: false,
-    from: `${city}, Петра Романова 4,
+    from: `${city}, Петра Романова 4`,
     toEnabled: true,
-    to: `${city}, 5-я Кожуховская 6,
+    to: `${city}, 6-я Кожуховская 6`,
   });
  });
