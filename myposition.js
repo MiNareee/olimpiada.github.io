@@ -6,16 +6,7 @@ ymaps.ready( function (){
   });
   let control= mymap.controls.get('routePanelControl');
   let city='Москва';
-                       
-  control.routePanel.state.set({
-    type: 'masstransit',
-    fromEnabled: false,
-    from: `${city}, Петра Романова 4`,
-    toEnabled: true,
-    to: `${city}, 6-я Кожуховская 6`,
-  });
- });
-var options = {
+  var options = {
   enableHighAccuracy: true,
   timeout: 5000,
   maximumAge: 0
@@ -25,6 +16,21 @@ function success(pos) {
   var crd = pos.coords;
   console.log(`Широта: ${crd.latitude}`);
   console.log(`Долгота: ${crd.longitude}`);
+  
+  
+  let reverseGeocoder= ymaps.geocoder([crd.latitude,crd.longitude]);
+  let locationText= none;
+reverseGeocoder.then(function(res) {
+  locationText=res.geoObjects.get(0).properties.get('text')
+   control.routePanel.state.set({
+    type: 'masstransit',
+    fromEnabled: false,
+    from: locationText,
+    toEnabled: true,
+    to: `${city}, 6-я Кожуховская 6`,
+  });
+  });
+                       
 }
 
 function error(err) {
@@ -32,3 +38,4 @@ function error(err) {
 }
 
 navigator.geolocation.getCurrentPosition(success, error, options);
+});
