@@ -4,7 +4,11 @@ function init(){
     center:[55.75366489822893,37.626052494342886],
     zoom:17
   });
-  let placemark= new ymaps.Placemark([55.75366489822893,37.626052494342886],{},{
+  let placemark= new ymaps.Placemark([55.75366489822893,37.626052494342886],{
+  ballonContentHeader : 'Хедер боди',
+  ballonContentBody: 'Боди балуна',
+  ballonContentFooter: 'Подвал',
+  },{
     
   });
   let placemark2= new ymaps.Placemark([55.760610429335166,37.619841278114016],{},{
