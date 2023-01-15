@@ -11,7 +11,17 @@ function init(){
   },{
     
   });
-  let placemark2= new ymaps.Placemark([55.760610429335166,37.619841278114016],{},{
+  let placemark2= new ymaps.Placemark([55.760610429335166,37.619841278114016],{
+  ballonContent: `
+    <div class='ballon_address'> г.Москва</div>
+    <div class='ballon_contacts'> г.Москва</div>
+    <a href ='tel:+79999999999'> +79999999999</a>
+    </div>
+  
+  
+  `
+  },{
+     
     
   });
   let placemark3= new ymaps.Placemark([55.75564064908507,37.63257850958312],{},{
