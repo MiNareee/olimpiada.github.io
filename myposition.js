@@ -6,7 +6,7 @@ ymaps.ready( function (){
   });
   let control= mymap.controls.get('routePanelControl');
   let city='Москва';
-  var options = {
+  const options = {
   enableHighAccuracy: true,
   timeout: 5000,
   maximumAge: 0
