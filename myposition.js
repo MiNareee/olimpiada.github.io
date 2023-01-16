@@ -14,9 +14,8 @@ ymaps.ready( function (){
 
 function success(pos) {
   const crd = pos.coords;
-  console.log(`Широта: ${crd.latitude}`);
-  console.log(`Долгота: ${crd.longitude}`);
-  
+  console.log(`Latitude : ${crd.latitude}`);
+  console.log(`Longitude: ${crd.longitude}`);
   
   let reverseGeocoder= ymaps.geocoder([crd.latitude,crd.longitude]);
   let locationText= null;
@@ -41,3 +40,4 @@ function error(err) {
 
 navigator.geolocation.getCurrentPosition(success, error, options);
 });
+
