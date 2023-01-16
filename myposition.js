@@ -21,7 +21,7 @@ function success(pos) {
   let reverseGeocoder= ymaps.geocoder([crd.latitude,crd.longitude]);
   let locationText= none;
 reverseGeocoder.then(function(res) {
-  locationText=res.geoObjects.get(0).properties.get('text')
+  locationText=res.geoObjects.get(0).properties.get('text');
    control.routePanel.state.set({
     type: 'masstransit',
     fromEnabled: false,
