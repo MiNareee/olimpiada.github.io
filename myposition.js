@@ -22,16 +22,15 @@ function success(pos) {
   let locationText= null;
 reverseGeocoder.then(function(res) {
   locationText=res.geoObjects.get(0).properties.get('text')
-  
-   control.routePanel.state.set({
+  });
+  console.log(locationText)
+  control.routePanel.state.set({
     type: 'masstransit',
     fromEnabled: false,
     from: locationText,
     toEnabled: true,
     to: `${city}, 6-я Кожуховская 6`,
   });
-  });
-  console.log(locationText)
                        
 }
 
