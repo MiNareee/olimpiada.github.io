@@ -13,25 +13,26 @@ ymaps.ready( function (){
 };
 
 function success(pos) {
-  var crd = pos.coords;
+  const crd = pos.coords;
   console.log(`Широта: ${crd.latitude}`);
   console.log(`Долгота: ${crd.longitude}`);
   
   
   let reverseGeocoder= ymaps.geocoder([crd.latitude,crd.longitude]);
   let locationText= null;
-reverseGeocoder.then(function(res) {
+  reverseGeocoder.then(function(res) {
   locationText=res.geoObjects.get(0).properties.get('text')
-  });
   console.log(locationText)
+    
   control.routePanel.state.set({
     type: 'masstransit',
     fromEnabled: false,
     from: locationText,
     toEnabled: true,
     to: `${city}, 6-я Кожуховская 6`,
+    });
   });
-                       
+  console.log(locationText)
 }
 
 function error(err) {
