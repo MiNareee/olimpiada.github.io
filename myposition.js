@@ -21,7 +21,6 @@ function success(pos) {
   let locationText= null;
   reverseGeocoder.then(function(res) {
   locationText=res.geoObjects.get(0).properties.get('text')
-  console.log(locationText)
     
   control.routePanel.state.set({
     type: 'masstransit',
@@ -31,7 +30,6 @@ function success(pos) {
     to: `${city}, 6-я Кожуховская 6`,
     });
   });
-  console.log(locationText)
 }
 
 function error(err) {
