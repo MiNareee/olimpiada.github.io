@@ -5,11 +5,19 @@ ymaps.ready( function (){
     controls:['routePanelControl']
   });
   let control= mymap.controls.get('routePanelControl');
-  let location = ymaps.geolocation.get();
-  location.then(function (res) {
-    let userTextLocation = res.geoObjects.get(0).properties.get('text');
-    control.routePanel.state.set({
-        from: userTextLocation,
-        to: 'Москва, ул. Льва Толстого, 16'
-    });
-});
+  let city='Москва';
+  let location=ymaps.geolocation.get();
+location.then (function(res){
+  let locationText=res.geoObjects.get(0).properties.get('text');
+  console.log(locationText)
+})
+    
+                       
+  control.routePanel.state.set({
+    type: 'masstransit',
+    fromEnabled: false,
+    from: locationText,
+    toEnabled: true,
+    to: `${city}, 6-я Кожуховская 6`,
+  });
+ });
