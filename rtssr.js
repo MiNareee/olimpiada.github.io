@@ -16,6 +16,6 @@
     type: 'masstransit',
     fromEnabled: false,
     from: locationText,
-    toEnabled: true,
+    toEnabled: false,
     to: `${city}, 6-я Кожуховская 6`,
   });
