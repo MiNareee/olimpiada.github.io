@@ -19,4 +19,4 @@ control.routePanel.state.set({
     toEnabled: false,
     to: `${city}, 6-я Кожуховская 6`,
   });
-})
+});
