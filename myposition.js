@@ -17,7 +17,7 @@ function success(pos) {
   console.log(`Latitude : ${crd.latitude}`);
   console.log(`Longitude: ${crd.longitude}`);
   
-  let reverseGeocoder= ymaps.geocoder([crd.latitude,crd.longitude]);
+  let reverseGeocoder= ymaps.geocode([crd.latitude,crd.longitude]);
   let locationText= null;
   reverseGeocoder.then(function(res) {
   locationText=res.geoObjects.get(0).properties.get('text')
