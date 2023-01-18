@@ -1,7 +1,7 @@
 ymaps.ready(function () {
     // Построение маршрута на общественном транспорте.
     
-    let myMap = new ymaps.Map('map', {
+    var myMap = new ymaps.Map('map', {
         center: [55.751574, 37.573856],
         zoom: 9,
         controls: []
@@ -11,15 +11,20 @@ ymaps.ready(function () {
     let multiRoute = new ymaps.multiRouter.MultiRoute({
         referencePoints: [
             'метро Смоленская',
-            'метро Арбатская'
-            [55.734876, 37.59308],
-        ],{
-      // Автоматически устанавливать границы карты так,
-      // чтобы маршрут был виден целиком.
-      boundsAutoApply: true
-});
+            'метро Арбатская',
+            'метро Кожуховская'
+        ],
+        params: {
+            // Тип маршрута: на общественном транспорте.
+            routingMode: "masstransit"  
+        }
+    }, {
+        // Автоматически устанавливать границы карты так,
+        // чтобы маршрут был виден целиком.
+        boundsAutoApply: true
+    });
 
     // Добавление маршрута на карту.
     myMap.geoObjects.add(multiRoute);
-});
 });   
+</script>
