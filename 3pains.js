@@ -27,4 +27,3 @@ ymaps.ready(function () {
     // Добавление маршрута на карту.
     myMap.geoObjects.add(multiRoute);
 });   
-</script>
