@@ -1,7 +1,7 @@
 ymaps.ready(function () {
     // Построение маршрута на общественном транспорте.
     
-    var myMap = new ymaps.Map('map', {
+    let mymap = new ymaps.Map('map', {
         center: [55.751574, 37.573856],
         zoom: 9,
         controls: []
@@ -25,5 +25,5 @@ ymaps.ready(function () {
     });
 
     // Добавление маршрута на карту.
-    myMap.geoObjects.add(multiRoute);
+    mymap.geoObjects.add(multiRoute);
 });   
