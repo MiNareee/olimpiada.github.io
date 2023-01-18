@@ -13,7 +13,7 @@
       console.log(locationText)
     control.routePanel.state.set({
     type: 'masstransit',
-    fromEnabled: false,
+    fromEnabled: true,
     from: locationText,
     toEnabled: false,
     to: `${city}, 6-я Кожуховская 6`,
