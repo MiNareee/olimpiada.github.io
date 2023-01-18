@@ -1,22 +1,28 @@
-  ymaps.ready(function(){
-  let mymap=new ymaps.Map('map',{
-    center:[55.75366489822893,37.626052494342886],
-    zoom:17,
-  });
-  let multiRoute = new ymaps.multiRouter.MultiRoute({   
-        // Точки маршрута.
-        // Обязательное поле. 
+ymaps.ready(function () {
+    // Построение маршрута на общественном транспорте.
+    
+    let myMap = new ymaps.Map('map', {
+        center: [55.751574, 37.573856],
+        zoom: 9,
+        controls: []
+    });
+    
+    // Создание экземпляра маршрута.
+    let multiRoute = new ymaps.multiRouter.MultiRoute({
         referencePoints: [
-            'Москва, метро Смоленская',
-            'Москва, метро Арбатская',
-            [55.734876, 37.59308], // улица Льва Толстого.
-        ]
+            'метро Смоленская',
+            'метро Арбатская'
+        ],
+        params: {
+            // Тип маршрута: на общественном транспорте.
+            routingMode: "masstransit"  
+        }
     }, {
-      // Автоматически устанавливать границы карты так,
-      // чтобы маршрут был виден целиком.
-      boundsAutoApply: true
-});
+        // Автоматически устанавливать границы карты так,
+        // чтобы маршрут был виден целиком.
+        boundsAutoApply: true
+    });
 
     // Добавление маршрута на карту.
     myMap.geoObjects.add(multiRoute);
-});
+});   
