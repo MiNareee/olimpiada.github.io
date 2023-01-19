@@ -8,16 +8,25 @@
     </script>
     <script src='whatanim.js'></script>
     <link href='beauti.css' rel='stylesheet'>
+     <link href='wearhu.css' rel='stylesheet'>
   </head>
   <body>
     <br>
     <br>
     <div class="rectangle word">Добро пожаловать, данное приложение поможет создать маршрут по местам ВДНХ специально для Вас!</div><br><br>
-    <p> Выберите из списка, места которые Вы бы хотели посетить: </p> <br>
-    <input type='checkbox'> <label> Фонтан Дружбы народов</label> <br><br>
-    <input type='checkbox'> Фонтан Каменный цветок <br><br>
-    <input type='checkbox'> Макет Москвы <br><br>
-    <input type='checkbox'> Москвариум <br><br>
+    <div class="dropdown">
+     <input type="checkbox" id="menu">
+     <div class="-hover">
+      <span>Выберите из списка, места которые Вы бы хотели посетить:</span>
+      <label for="menu" class="-arrow"></label>
+     </div>
+    <div class="-list">
+     <a href="#"><input type='checkbox'> <label> Фонтан Дружбы народов</label> <br><br>
+     <a href="#"><input type='checkbox'> Фонтан Каменный цветок </a><br><br>
+     <a href="#"><input type='checkbox'> Макет Москвы </a><br><br>
+     <a href="#"><input type='checkbox'> Москвариум </a> <br><br>
+       </div>
+     </div>
     <div id="map" style="width: 600px; height: 600px"></div>
     <script src='3pains.js'></script>
   </body>
