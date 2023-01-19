@@ -1,5 +1,7 @@
 
-
+body {
+  display: flex;
+}
 
 .rectangle{
 width: 70%;
