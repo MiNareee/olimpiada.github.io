@@ -1,4 +1,4 @@
-let words = ['Добро пожаловать, данное прилложение поможет создать маршрут по местам ВДНХ специально для Вас!'],
+let words = ['Добро пожаловать, данное приложение поможет создать маршрут по местам ВДНХ специально для Вас!'],
     part,
     i = 0,
     offset = 0,
@@ -7,7 +7,7 @@ let words = ['Добро пожаловать, данное прилложени
     skip_count = 0,
     skip_delay = 15,
     speed = 70;
-let wordflick = function () {
+var wordflick = function () {
   setInterval(function () {
     if (forwards) {
       if (offset >= words[i].length) {
@@ -37,7 +37,7 @@ let wordflick = function () {
         offset--;
       }
     }
-    $('.animation').text(part);
+    $('.word').text(part);
   },speed);
 };
 
