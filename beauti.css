@@ -11,6 +11,6 @@ background: #333;}
 .word {
   margin: auto;
   color: #ace7f2;
-  font: 700 normal 2.5em 'tahoma';
+  font: 500 normal 1.5em 'tahoma';
   text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
 }
