@@ -4,7 +4,7 @@ ymaps.ready(function () {
     let mymap = new ymaps.Map('map', {
         center: [55.751574, 37.573856],
         zoom: 9,
-        controls: ['smallMapDefaultSet']
+        controls: ['largeMapDefaultSet']
     });
     
     // Создание экземпляра маршрута.
