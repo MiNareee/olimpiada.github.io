@@ -9,6 +9,7 @@ margin:auto;
 background: #333;}
 
 .word {
+  text-align: center;
   margin: auto;
   color: #ace7f2;
   font: 500 normal 1.5em 'tahoma';
