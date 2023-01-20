@@ -5,9 +5,9 @@ let words = ['Добро пожаловать, данное приложение
     len = words.length,
     forwards = true,
     skip_count = 0,
-    skip_delay = 15000000000,
-    speed = 70;
-let wordflick = function () {
+    skip_delay = 15,
+    speed = 150;
+var wordflick = function () {
   setInterval(function () {
     if (forwards) {
       if (offset >= words[i].length) {
@@ -32,9 +32,6 @@ let wordflick = function () {
     if (skip_count == 0) {
       if (forwards) {
         offset++;
-      }
-      else {
-        offset--;
       }
     }
     $('.word').text(part);
