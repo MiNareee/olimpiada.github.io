@@ -40,3 +40,6 @@
 .dropdown #menu:checked ~ .-arrow::after {
   content: '\25B2';
 }
+.container:hover input ~ .checkmark {
+    background-color: #ccc678;
+}
