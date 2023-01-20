@@ -43,6 +43,11 @@
 .container:hover input ~ .checkmark {
     background-color: #ccc678;
 }
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
 .container input:checked ~ .checkmark:after {
 
     display: block;
