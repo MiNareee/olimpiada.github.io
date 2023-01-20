@@ -8,10 +8,6 @@
   display: none;
 }
 
-.dropdown .-hover {
-  color: #fdac7a;
-}
-
 .dropdown .-hover > span {
   text-decoration: underline dashed;
   font-style: italic;
