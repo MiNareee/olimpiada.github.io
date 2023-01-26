@@ -1,38 +1,21 @@
-
-submit.onclick = function(){
-
-if (one.checked) {
-  alert("Чекбокс нажат -вариант №1"); 
-} 
-  else { 
-    alert("Чекбокс не нажат-вариант №1");
-  }
+if ($('#one').is(':checked')){
+	alert('Включен');
+} else {
+	alert('Выключен');
 }
 
-submit.onclick = function(){
-
-if (two.checked) {
-  alert("Чекбокс нажат -вариант №1"); 
-} 
-  else { 
-    alert("Чекбокс не нажат-вариант №1");
-  }
+if ($('#two').is(':checked')){
+	alert('Включен');
+} else {
+	alert('Выключен');
 }
-submit.onclick = function(){
-
-if (tree.checked) {
-  alert("Чекбокс нажат -вариант №1"); 
-} 
-  else { 
-    alert("Чекбокс не нажат-вариант №1");
-  }
+if ($('#tree').is(':checked')){
+	alert('Включен');
+} else {
+	alert('Выключен');
 }
-submit.onclick = function(){
-
-if (four.checked) {
-  alert("Чекбокс нажат -вариант №1"); 
-} 
-  else { 
-    alert("Чекбокс не нажат-вариант №1");
-  }
+if ($('#four').is(':checked')){
+	alert('Включен');
+} else {
+	alert('Выключен');
 }
