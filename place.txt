@@ -20,3 +20,4 @@
 Павильон № 4 Киргизия [55.82856509389265,37.63027469548516]
 https://snipp.ru/jquery/checkbox-jquery
 https://www.javascripttutorial.net/javascript-dom/javascript-checkbox/
+https://blog.bullgare.com/wp-content/uploads/2019/05/aca.pdf
