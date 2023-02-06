@@ -1,0 +1,2 @@
+https://vc.ru/newtechaudit/353372-muravi-i-python-ishchem-samye-korotkie-puti
+https://github.com/plushchaynikolay/ant_algorithm/blob/master/ant-algorithm.py
