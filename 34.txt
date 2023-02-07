@@ -9,7 +9,6 @@ for i in range(len(a)):
     for j in range(len(a[i])):
         if a[i][j]!=0:
             a[i][j]=q/a[i][j]
-print(a)
 #Матрица которую мы получаем для счёта вероятности она является неизменяемой
 #[[0, 0.8130081300813008, 0.6666666666666666, 0.3333333333333333, 0.23255813953488372, 0.5291005291005291],
 #[0.8130081300813008, 0, 0.3333333333333333, 0.2183406113537118, 0.10341261633919338, 0.3115264797507788],
@@ -20,23 +19,26 @@ print(a)
 
 # матрица феромонов
 s = 6
-Zero = [[0] * s] * s
+Zero=[]
+for i in range(s):
+    m = [0] * s
+    Zero.append(m)
+
+print(Zero)
 mas = [0.2] * s
 for i in range(s): 
     mas[i] = [0.2] * s
-print(mas)
 B=1 #бета-зависимость от близости. 
 A=1 #альфа - зависимость от ферамонов
         
 # дальше по вложенным массивам надо посчитать вероятность для каждой точки
 Sum=0
-for i in  range(len(a)):
-    for j in range(len(a[i])):
-        Sum=Sum+a[i][j]**B*float(mas[i][j])**A
+for j in range(len(a[0])):
+    Sum=Sum+a[0][j]**B*float(mas[0][j])**A
 print(Sum)
 
-for i in  range(len(a)):
-    for j in range(len(a[i])):
-        lk=a[i][j]**B*float(mas[i][j])**A
-        Zero[i][j]=lk/Sum
+i=0
+for j in range(len(a[0])):
+    lk=a[0][j]**B*float(mas[0][j])**A
+    Zero[0][j]=lk/Sum
 print(Zero)
