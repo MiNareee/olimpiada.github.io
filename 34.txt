@@ -1,5 +1,7 @@
 https://vc.ru/newtechaudit/353372-muravi-i-python-ishchem-samye-korotkie-puti
 https://github.com/plushchaynikolay/ant_algorithm/blob/master/ant-algorithm.py
+
+
 # матрица расстояний (вставляем мой код из дома)
 a=[[0,123,150,300,430,189],[123,0,300,458,967,321],[150,300,0,567,893,436],[300,458,567,0,562,132],[430,967,893,562,0,321],[189,321,436,132,321,0]]
 q=100
@@ -28,11 +30,13 @@ A=1 #альфа - зависимость от ферамонов
         
 # дальше по вложенным массивам надо посчитать вероятность для каждой точки
 Sum=0
-for j in range(len(a[0])):
-    Sum=Sum+a[i][j]**B*float(mas[i][j])**A
+for i in  range(len(a)):
+    for j in range(len(a[i])):
+        Sum=Sum+a[i][j]**B*float(mas[i][j])**A
 print(Sum)
 
-for j in range(len(a[0])):
-    lk=a[i][j]**B*float(mas[i][j])**A
-    Zero[i][j]=lk/Sum
+for i in  range(len(a)):
+    for j in range(len(a[i])):
+        lk=a[i][j]**B*float(mas[i][j])**A
+        Zero[i][j]=lk/Sum
 print(Zero)
