@@ -145,3 +145,32 @@ for i in range(len(a)):
             lk=a[i][j]**B*float(mas[i][j])**A
             Zero[i][j]=lk/kf[i]
 print(Zero)
+
+
+
+kf=[]
+for i in range(len(a)):
+    ss=0
+    Sum=0
+    tr=a[i].index(0)
+    lkg=6-tr
+    while ss<lkg:
+        for j in range(tr,len(a[i])):
+            ss+=1
+            Sum=Sum+(a[i][j]**B*float(mas[i][j])**A)
+        if Sum!=0:
+            kf.append(Sum)
+        else:
+            kf.append(1)
+        
+print(kf)
+#Здесь мы будем считать вероятность для определённой точки
+for i in range(len(a)):
+    ds=0
+    while ds<6:
+        for j in range(len(a[i])):
+            ds+=1
+            lk=a[i][j]**B*float(mas[i][j])**A
+            Zero[i][j]=lk/kf[i]
+print(Zero)
+
