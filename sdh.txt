@@ -174,3 +174,13 @@ for i in range(len(a)):
             Zero[i][j]=lk/kf[i]
 print(Zero)
 
+for age in range(AGES):
+    antROUTE.fill(0)
+    antDIST.fill(0)
+    for k in range(ants):
+          antROUTE[k, 0] = k % s
+           for t in range(1, CITIES):
+            from_city = int(antROUTE[k, t-1])
+            P = (a[from_city] ** A) * (mas[from_city] ** B)
+            for i in range(s):
+                  P[int(antROUTE[k, i])] = 0
