@@ -288,3 +288,53 @@ for age in range(AGES):
           #  P = (a[from_city] ** A) * (mas[from_city] ** B)
           #  for i in range(s):
           #        P[int(antROUTE[k, i])] = 0
+
+
+
+a=[[1,2,3,4,5],[2,3,4,5,6],[4,5,6,7,8],[6,7,8,9,10]]
+Zero=[]
+s=5
+for i in range(s):
+    m = [0] * s
+    Zero.append(m)
+hg=[]
+A=1
+B=1
+d=[]
+for i in range(s):
+    k = [0] * s
+    d.append(m)
+kf=[]
+ts=s-1
+
+
+for i in range(len(a)):
+    for j in range(len(a[i])):
+        if d[i][j]!=0:
+            d[i][j]=1/a[i][j]
+mas = [0.2] * s
+for i in range(s):
+    mas[i] = [0.2] * s
+antROUTE=[]
+kf=[]
+for k in range(s):
+    from_city=k
+    P = (mas[k][from_city] ** A) * (d[k][from_city] ** B)
+    if k not in antROUTE:
+        for i in range(len(a)):
+            ss=0
+            Sum=0
+            while ss<ts:
+                for j in range(len(d[i])):
+                    ss+=1
+                    Sum=Sum+(a[i][j]**B*float(mas[i][j])**A)
+                kf.append(Sum)
+        for i in range(len(a)):
+            ds=0
+            while ds<ts:
+                for j in range(len(a[i])):
+                    ds+=1
+                    lk=a[i][j]**B*float(mas[i][j])**A
+                    Zero[i][j]=lk/kf[i]
+        ts-=1
+        antROUTE.append(k)
