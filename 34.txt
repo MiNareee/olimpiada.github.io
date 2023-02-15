@@ -134,3 +134,28 @@ for age in range(AGES):
               P = (mas[k][from_city] ** A) * (d[k][from_city] ** B)# вероятность посещения уже посещенных городов = 0
               for i in range(s):
                   P=[int(antROUTE[k,i])] = 0#???
+a=[[1,2,3,4,5],[2,3,4,5,6],[4,5,6,7,8],[6,7,8,9,10]]
+Zero=[]
+s=4
+for i in range(s):
+    m = [0] * s
+    Zero.append(m)
+hg=[]
+mas = [0.2] * s
+A=1
+B=1
+d=[]
+
+for i in range(len(a)):
+    for j in range(len(a[i])):
+        if d[i][j]!=0:
+            d[i][j]=1/a[i][j]
+for i in range(s):
+    mas[i] = [0.2] * s
+antROUTE=[]
+for i in range(s):
+    md = [0] * ants
+    antROUTE.append(md)
+for k in range(s):
+    from_city=int(antROUTE[k]) 
+    P = (mas[k][from_city] ** A) * (d[k][from_city] ** B)
