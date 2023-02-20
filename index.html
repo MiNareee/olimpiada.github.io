@@ -5,8 +5,9 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title> Главная страница </title>
     <link type="image/x-icon" rel="shortcut icon" href="favicon.ico">
+    <script src="https://yastatic.net/jquery/3.3.1/jquery.min.js">
+    </script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=f04864f1-302e-4fe4-9cf1-0afa46950037&lang=ru_RU" type="text/javascript"></script>
-    <script src="https://snipp.ru/cdn/jquery/2.1.1/jquery.min.js"></script>
     <script src='JavaScript/pok.js'></script>
   </head>
   <body>
@@ -89,7 +90,7 @@
 
 	$(".group input").on("click", function() {
 
-		if($(".group input:checked").length >= 9) { // Не больше 2-х checkbox
+		if($(".group input:checked").length >= 9) { 
 			
 			$(".group input:not(:checked)").attr("disabled", true);
 		
