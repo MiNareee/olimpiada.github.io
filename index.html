@@ -10,6 +10,7 @@
     <script src='JavaScript/whatanim.js'></script>
      <script src='JavaScript/mskTime.js'></script>
     <script src='JavaScript/chekbox.js'></script>
+    <script src='JavaScript/pok.js'></script>
     <link href='beauti.css' rel='stylesheet'>
      <link href='wearhu.css' rel='stylesheet'>
     <link href='navigator.css' rel='stylesheet'>
@@ -21,41 +22,93 @@
     Добро пожаловать, данное приложение поможет создать маршрут по местам ВДНХ специально для Вас!
     <br>
     <br>
-    <div class="dropdown">
-     <input type="checkbox" id="menu">
-     <div class="-hover">
-      <span>Выберите из списка, места которые Вы бы хотели посетить:</span>
-      <label for="menu" class="-arrow"></label>
-     </div>
-    <div class="-list">
-      <label class="container"> 
-        <input type="checkbox" id="one"> Фонтан Дружбы Народов
-        <span class="checkmark"></span><br><br>
-        </label>
-      <label class="container"> 
-        <input type="checkbox" id="two"> Фонтан Каменный цветок
-        <span class="checkmark"></span><br><br>
-        </label>
-      <label class="container"> 
-        <input type="checkbox" id="tree"> Макет Москвы
-        <span class="checkmark"></span><br><br>
-        </label>
-      <label class="container"> 
-        <input type="checkbox" id="four"> Москвариум
-        <span class="checkmark"></span><br><br>
-        </label>
-      <label class="container"> 
-            <a href="map.html" class="btn">Построить маршрут</a>
-      </label>
-     </div>
-   </div>
-      <br>
-      <br>
-    <div id="map" style="width: 600px; height: 600px"></div>
-    <script src='JavaScript/3pains.js'></script>
-    <br>
-    <br>
-    <span id="tik-tak"></span>
+    <ul>
+        <li>Достопримечательности:</li>
+    </ul>
+		<div class="group">
+                <label><input type="checkbox" id="1" value="1"> выбор 1</label> <br>
+                <label><input type="checkbox" id="2" value="2"> выбор 2</label><br>
+                <label><input type="checkbox" id="3" value="3"> выбор 3</label> <br>
+                <label><input type="checkbox" id="4" value="4"> выбор 4</label> <br>
+                <label><input type="checkbox" id="5" value="5"> выбор 5</label> <br>
+                <label><input type="checkbox" id="6" value="6"> выбор 6</label> <br>
+                <label><input type="checkbox" id="7" value="7"> выбор 7</label><br>
+                <label><input type="checkbox" id="8" value="8"> выбор 8</label><br>
+                <label><input type="checkbox" id="9" value="9"> выбор 9</label><br>
+                <label><input type="checkbox" id="10" value="10"> выбор 10</label><br>
+                <label><input type="checkbox" id="11" value="11"> выбор 11</label> <br>
+                <label><input type="checkbox" id="12" value="12"> выбор 1</label> <br>
+                <label><input type="checkbox" id="13" value="13"> выбор 2</label><br>
+                <label><input type="checkbox" id="14" value="14"> выбор 3</label> <br>
+                <label><input type="checkbox" id="15" value="15"> выбор 4</label> <br>
+                <label><input type="checkbox" id="16" value="16"> выбор 5</label> <br>
+                <label><input type="checkbox" id="17" value="17"> выбор 6</label> <br>
+                <label><input type="checkbox" id="18" value="18"> выбор 7</label><br>
+                <label><input type="checkbox" id="19" value="19"> выбор 8</label><br>
+                <label><input type="checkbox" id="20" value="20"> выбор 9</label><br>
+                <label><input type="checkbox" id="21" value="21"> выбор 10</label><br>
+                <label><input type="checkbox" id="22" value="22"> выбор 11</label> <br>
+                <label><input type="checkbox" id="23" value="23"> выбор 1</label> <br>
+                <label><input type="checkbox" id="24" value="24"> выбор 2</label><br>
+                <label><input type="checkbox" id="25" value="25"> выбор 3</label> <br>
+                <label><input type="checkbox" id="26" value="26"> выбор 4</label> <br>
+                <label><input type="checkbox" id="27" value="27"> выбор 5</label> <br>
+                <label><input type="checkbox" id="28" value="28"> выбор 6</label> <br>
+                <label><input type="checkbox" id="29" value="29"> выбор 7</label><br>
+                <label><input type="checkbox" id="30" value="30"> выбор 8</label><br>
+                <label><input type="checkbox" id="31" value="31"> выбор 9</label><br>
+                <label><input type="checkbox" id="32" value="32"> выбор 10</label><br>
+                <label><input type="checkbox" id="33" value="33"> выбор 11</label> <br>
+                <label><input type="checkbox" id="34" value="34"> выбор 1</label> <br>
+                <label><input type="checkbox" id="35" value="35"> выбор 2</label><br>
+                <label><input type="checkbox" id="36" value="36"> выбор 3</label> <br>
+                <label><input type="checkbox" id="37" value="37"> выбор 4</label> <br>
+                <label><input type="checkbox" id="38" value="38"> выбор 5</label> <br>
+                <label><input type="checkbox" id="39" value="39"> выбор 6</label> <br>
+                <label><input type="checkbox" id="40" value="40"> выбор 7</label><br>
+                <label><input type="checkbox" id="41" value="41"> выбор 8</label><br>
+                <label><input type="checkbox" id="42" value="42"> выбор 9</label><br>
+                <label><input type="checkbox" id="43" value="43"> выбор 10</label><br>
+                <label><input type="checkbox" id="44" value="44"> выбор 11</label> <br>
+                <label><input type="checkbox" id="45" value="45"> выбор 1</label> <br>
+                <label><input type="checkbox" id="46" value="46"> выбор 2</label><br>
+                <label><input type="checkbox" id="47" value="47"> выбор 3</label> <br>
+                <label><input type="checkbox" id="48" value="48"> выбор 4</label> <br>
+                <label><input type="checkbox" id="49" value="49"> выбор 5</label> <br>
+                <label><input type="checkbox" id="50" value="50"> выбор 6</label> <br>
+                <label><input type="checkbox" id="51" value="51"> выбор 7</label><br>
+                <label><input type="checkbox" id="52" value="52"> выбор 8</label><br>
+                <label><input type="checkbox" id="53" value="53"> выбор 9</label><br>
+                <label><input type="checkbox" id="54" value="54"> выбор 10</label><br>
+                <label><input type="checkbox" id="55" value="55"> выбор 11</label> <br>
+                <label><input type="checkbox" id="56" value="56"> выбор 1</label> <br>
+                <label><input type="checkbox" id="57" value="57"> выбор 2</label><br>
+                <label><input type="checkbox" id="58" value="58"> выбор 3</label> <br>
+                <label><input type="checkbox" id="59" value="59"> выбор 4</label> <br>
+                <label><input type="checkbox" id="60" value="60"> выбор 5</label> <br>
+                <label><input type="checkbox" id="61" value="61"> выбор 6</label> <br>
+                <label><input type="checkbox" id="62" value="62"> выбор 7</label><br>
+                <label><input type="checkbox" id="63" value="63"> выбор 8</label><br>
+                <label><input type="checkbox" id="64" value="64"> выбор 9</label><br>
+                <button onclick="alerted();">Клик</button>
+    </div>
+	  <script>
+
+	$(".group input").on("click", function() {
+
+		if($(".group input:checked").length >= 9) { // Не больше 2-х checkbox
+			
+			$(".group input:not(:checked)").attr("disabled", true);
+		
+		} else {
+			
+			$(".group input:disabled").attr("disabled", false);
+		
+		}
+
+	});
+	
+</script>
   </body>
 </html>
    
