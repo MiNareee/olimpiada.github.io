@@ -65,7 +65,12 @@ var s=[[1, 'Фонтан Дружбы народов', 'Главный фонт�
 function alerted(){
 	var checked = [];
 	$('input:checkbox:checked').each(function() {
-		checked.push($(this).val());
-	console.log(checked)
+	checked.push($(this).val());
 	});
+	var fs=[]
+	for(let i=0;i<checked.length;i++){
+		let t = checked[i]-1
+		fs.push(s[t])
+  }
+console.log(fs)
 }
