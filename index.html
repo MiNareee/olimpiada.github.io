@@ -18,6 +18,17 @@
     <ul>
         <li>Достопримечательности:</li>
     </ul>
+      <script>
+		  $(".group input").on("click", function() {
+			  if($(".group input:checked").length >= 9) { // Не больше 2-х checkbox
+				  $(".group input:not(:checked)").attr("disabled", true);
+			  } else {
+				  $(".group input:disabled").attr("disabled", false);
+		
+			  }
+
+		  });
+	</script>
 	 <div class="group">
          <label><input type="checkbox" id="1" value="1"> Фонтан Дружбы народов </label> <br>
          <label><input type="checkbox" id="2" value="2"> Фонтан Каменный цветок </label><br>
@@ -84,17 +95,6 @@
          <label><input type="checkbox" id="63" value="63"> Городская ферма</label><br>
          <button onclick="alerted();">Клик</button>
            </div>
-	<script>
-		$(".group input").on("click", function() {
-			  if($(".group input:checked").length >= 9) { // Не больше 2-х checkbox
-				  $(".group input:not(:checked)").attr("disabled", true);
-			  } else {
-				  $(".group input:disabled").attr("disabled", false);
-		
-			  }
-
-		  });
-	</script>
 	  <br>
 	  <div id="map" style="width: 600px; height: 600px"></div>
 	  <script src='JavaScript/3pains.js'></script>
