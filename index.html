@@ -84,8 +84,8 @@
          <label><input type="checkbox" id="63" value="63"> Городская ферма</label><br>
          <button onclick="alerted();">Клик</button>
            </div>
-	  <script>
-		  $(".group input").on("click", function() {
+	<script>
+		$(".group input").on("click", function() {
 			  if($(".group input:checked").length >= 9) { // Не больше 2-х checkbox
 				  $(".group input:not(:checked)").attr("disabled", true);
 			  } else {
