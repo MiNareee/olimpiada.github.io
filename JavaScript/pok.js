@@ -5,3 +5,4 @@ function alerted(){
 	});
 	console.log(checked);
 }
+
