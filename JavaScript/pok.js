@@ -68,10 +68,10 @@ function alerted(){
 	checked.push($(this).val());
 	});
 	var fs=[]
+	console.log(checked)
 	for(let i=0;i<checked.length;i++){
 		let t = checked[i]-1
 		fs.push(s[t])
   }
-console.log(fs)
 }
 
