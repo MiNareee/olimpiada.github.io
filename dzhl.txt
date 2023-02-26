@@ -24,7 +24,7 @@ function TimeOclc(TimeAll, Time) {
 let TimeAll=[['Пн', '12:00-18:00'],['Вт','12:00-18:00'],['Ср', '10:00-19:00'],['Чт', '12:00-18:00'],['Пт', '14:00-21:00'],['Сб', 'выходной'],['Вс','выходной']]
 let Time=['Пн', '14:20']
 console.log(TimeOclc(TimeAll, Time))
-
+a=[[0,2,3,4,5],[2,0,4,5,6],[3,4,0,7,8],[4,5,7,0,10], [5,6,8,10,0]]
 let s = 5
 let A = 1
 let B = 1
@@ -82,7 +82,7 @@ for (let fg=0; fg<Ages;fg++){
                 }
               }
             }
-            if (antROUTE.length<>5){
+            if (antROUTE.length!=5){
               let isNotChosen = true
               while (isNotChosen){
                 var rand = Math.random()
@@ -96,7 +96,7 @@ for (let fg=0; fg<Ages;fg++){
                       }
                       
                     }
-                    let td[o][k+1]=indexi
+                    td[o][k+1]=indexi
                     from_city=indexi
                     antROUTE.push(from_city)
                     let isNotChosen = false
@@ -134,7 +134,7 @@ for (let fg=0; fg<Ages;fg++){
           
       }
       let tic=dsd/50*60
-      let TimeW=tic+30*s
+      TimeW=tic+30*s
       TimeWR.push(TimeW)
       if ((dsd<mnTrass) && (sum(TimeWR))<=TimeOclc(TimeAll,Time)){
         let mnTrass=dsd
