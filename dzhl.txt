@@ -67,7 +67,7 @@ for (let fg=0; fg<Ages;fg++){
             let Sum = 0 
             for (let lfg=0; lfg<a[from_city].length;lfg++){
                 if (antROUTE.indexOf(lfg)==-1){
-                    let Sum=Sum+(a[from_city][lfg]**B*(mas[from_city][lfg])**A)
+                    Sum=Sum+(a[from_city][lfg]**B*(mas[from_city][lfg])**A)
                 }
             }
             kf.push(Sum)
@@ -155,4 +155,4 @@ for (let fg=0; fg<Ages;fg++){
     }
   
 }
-print(mnTrass, bestT,TimeWR)
+console.log(mnTrass, bestT,TimeWR)
