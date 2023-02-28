@@ -1,0 +1,32 @@
+function distance(a){ 
+  var d=[] 
+  for (let i=0; i < a.length;i++){
+    d.push(a[i][3])
+  }
+  var Dict = new Array(a.length)
+  for ( let j = 0; j < a.length; j++) {
+       Dict[j]=new Array()
+      for (z=0; z<a.length; z++){
+        Dict[j][z]=0
+      }
+  }
+  for (let k=0; k < Dict.length;k++){
+    for (let t=0; t < Dict.length;t++){
+      var r=d[t]
+      var b=d[k]
+      lj=(b[0]-r[0])*111.1
+      let xz=(b[1]-r[1])*111.1
+      let u=Math.sqrt(xz**2+lj**2)
+      if (k!=t){
+        Dict[k][t]=Math.round(u*1000)
+        Dict[t][k]=Math.round(u*1000)
+      }else{
+        Dict[k][t]=0
+      }
+    }
+  }
+  return Dict 
+}
+  
+var a = [[1,'2','3',[55.829850009160864,37.631803808229506]],[5,'','',[55.828657307841844,37.631428251735684]],[3,'','',[55.83385573172871,37.626840815642716]],[2,'','',[55.82871391959448,37.62959962174149]]]
+console.log(distance(a))
