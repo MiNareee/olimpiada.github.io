@@ -61,6 +61,58 @@ var s=[[1, 'Фонтан Дружбы народов', 'Главный фонт�
 [61, 'Гаража особого назначения ФСО России', 'В музее представлены легендарные машины лидеров Российской империи, Советского Союза и Российской Федерации.', '[55.83595467350419,37.622379542991666]', ['Пн: Выходной','Вт — Вс: 11:00 — 20:00'],'30', 'https://a.d-cd.net/8UDSaqDN0EftPfnqSt9kbr4BeDU-1920.jpg', 'Входной билет: от 550 руб.Льготный билет: от 300 руб.'],
 [62, 'Центр национальных конных традиций', 'Центр национальных конных традиций – это уникальная площадка мирового уровня для демонстрации конного достояния России, где гармонично сочетается спорт, культура, образование, коневодство и туризм.', '[55.83827921235873,37.623388367754984]', ['Пн: Выходной','Вт — Вс: 11:00 — 20:00'],'30', 'https://i.timeout.ru/pix/441731.jpeg', 'Стандарт: от 560.Есть льготы'],
 [63, 'Городская ферма', 'Не покидая пределов Москвы, здесь в любую погоду можно скрыться от городской суеты и познакомиться с фермерской жизнью, традициями и симпатичными, ухоженными обитателями, наполнить день радостью творчества на семейном мастер-классе или оценить обеденное меню в кафе «Ферма».', '[55.840198954853165,37.627411094392876]', ['Пн-Пт: 10:30 — 19:00','Сб, Вс: 10:30 — 20:00'],'30', 'https://madeinfuture.ru/img/174/ferma-vdnh2.jpg', 'Пн-Пт: от 600 руб.Есть льготы']]
+function TimeOclc(TimeAll, Time) {
+  let t = String(Time[1])
+  let times = Number(t.slice(0, 2)) * 60 + Number(t.slice(3, 5))
+  for (let i = 0;i< TimeAll.length; i++){
+    if (TimeAll[i][0] == Time[0]) {
+      var indices = i
+    }
+  }
+  let s = String(indices)
+  let win1 = TimeAll[indices][0]
+  let win2 = TimeAll[indices][1]
+  if (win1 == 'выходной') {
+    return false
+  } else {
+    let time1 = Number(win2.slice(0, 2)) * 60 + Number(win2.slice(3, 5))
+    let time2 = Number(win2.slice(6, 8)) * 60 + Number(win2.slice(9, 11))
+    if ((time1 <= times) && (times <= time2)) {
+      return time2 - times
+    } else {
+      return false
+    } 
+  }   
+}
+function distance(a){ 
+  var d=[] 
+  for (let i=0; i < a.length;i++){
+    d.push(a[i][3])
+  }
+  var Dict = new Array(a.length)
+  for ( let j = 0; j < a.length; j++) {
+       Dict[j]=new Array()
+      for (z=0; z<a.length; z++){
+        Dict[j][z]=0
+      }
+  }
+  for (let k=0; k < Dict.length;k++){
+    for (let t=0; t < Dict.length;t++){
+      var r=d[t]
+      var b=d[k]
+      lj=(b[0]-r[0])*111.1
+      let xz=(b[1]-r[1])*111.1
+      let u=Math.sqrt(xz**2+lj**2)
+      if (k!=t){
+        Dict[k][t]=Math.round(u*1000)
+        Dict[t][k]=Math.round(u*1000)
+      }else{
+        Dict[k][t]=0
+      }
+    }
+  }
+  return Dict 
+}
 
 function alerted(){
 	var checked = [];
@@ -71,7 +123,125 @@ function alerted(){
 	for(let i=0;i<checked.length;i++){
 		let t = checked[i]-1
 		fs.push(s[t])
-	console.log(fs)
-  }
+	}
+	var a=distance(fs)
+	let s = 5
+	let A = 1
+	let B = 1
+	let ji = 0.64 
+	var d = []
+	let Ages = 100
+	let q = 8
+	let ant=10
+	let mnTrass = 1000000000000
+	var bestT = []
+	var mas = new Array(s);
+	for (var i = 0; i < mas.length; i++) {
+		mas[i] = new Array();
+		for (j=0; j<s; j++){
+			mas[i][j]=0.2;
+		}
+	}
+	for (let fg=0; fg<Ages;fg++){
+		var td = new Array(ant)
+		for (var i = 0; i < ant; i++) {
+			td[i]=new Array();
+			for (j=0; j<s; j++){
+				td[i][j]=0;
+			}
+		}
+		for (let o=0; o<ant;o++){
+			var kf=[]
+			var antROUTE=[]
+			let from_city=0
+			antROUTE.push(from_city)
+			var Zero = new Array(s)
+			for (var i = 0; i < s; i++) {
+				Zero[i]=new Array()
+				for (j=0; j<s; j++){
+					Zero[i][j]=0;
+				}
+			}
+			for (let k=0; k<s;k++){
+				let Sum = 0 
+				for (let lfg=0; lfg<a[from_city].length;lfg++){
+					if (antROUTE.indexOf(lfg)==-1){
+						Sum=Sum+(a[from_city][lfg]**B*(mas[from_city][lfg])**A)
+					}
+				}
+				kf.push(Sum)
+				for (let j=0; j<a[from_city].length;j++){
+					if (antROUTE.indexOf(j)==-1){
+						let lk=a[from_city][j]**B*(mas[from_city][j])**A
+						if (kf[k]!=0){
+							Zero[from_city][j]=lk/kf[k]
+						}else{
+							Zero[from_city][j]=1
+						}
+					}
+				}
+				if (antROUTE.length!=5){
+					let isNotChosen = true
+                                        while (isNotChosen){
+						var rand = Math.random()
+						for (p=0;p<Zero[from_city].length;p++){
+							if (Zero[from_city][p] >= rand){
+								let indexi=0
+								for (i=0;i<Zero[from_city].length;i++){
+									if (Zero[from_city][p]==Zero[from_city][i]){
+										indexi=i
+									}
+								}
+								td[o][k+1]=indexi
+								from_city=indexi
+								antROUTE.push(from_city)
+								isNotChosen = false
+								break
+							}
+						}
+					}
+				}
+			}
+		}
+		for (ih=0;ih<mas.length;ih++){
+			for (jh=0;jh<mas[ih].length;jh++){
+				mas[ih][jh]=mas[ih][jh]*ji
+			}
+		}
+		for (i=0;i<(td.length-1);i++){
+			let dsd=0
+                        var Trass=[]
+                        var TimeWR=[]
+                        let TimeW=0
+                        for (j=0;j<(td[i].length-1);j++){
+				Trass.push(td[i][j])
+                                if (td[i][j+1]==td[i][s-1]){
+					Trass.push(td[i][j+1])
+				}
+				fr=td[i][j]
+				fr1=td[i][j+1]
+                                dsd=dsd+a[fr][fr1]
+			}
+                        let tic=dsd/50*60
+                        TimeW=tic+30*s
+                        TimeWR.push(TimeW)
+                        let Sumr=0
+                        for (yt=0; yt<TimeWR.lenght; yt++){
+				Sumr=Sumr+TimeWR[yt]
+			}
+                        if  ((dsd<mnTrass) && (Sumr<=TimeOclc(TimeAll,Time))){
+				mnTrass=dsd
+				bestT=Trass             
+			}
+                        let L=q/dsd
+                        for (klo=0;klo<(td[i].length);klo++){
+				if (Sumr<=TimeOclc(TimeAll,Time)){
+					mas[fr][fr1]=mas[fr][fr1]+L
+                                        mas[fr1][fr]=mas[fr1][fr]+L
+				}
+			}
+		}
+	}
+	return (mnTrass, bestT,TimeWR)
 }
 
