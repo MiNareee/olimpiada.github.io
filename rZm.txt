@@ -19,3 +19,28 @@ else:
     else:
         s1=p*q*4
 print(s1)
+
+
+
+k=str(input())
+l=k.split()
+r=int(l[0])
+s=int(l[1])
+n=int(input())
+t=str(input())
+e=t.split()
+p=[int(i) for i in e]
+S=p[-1]
+rt=[1]*S
+for y in range(len(p)):
+    o1=p[y]+(r/2)
+    o2=p[y]-(r/2)
+    for i in range(S):
+        if i>=o2 and i<=o1:
+            rt[i]=0
+ew=0
+for c in range(S):
+    if rt[c]!=0 and c>ew:
+        rt[c]=2
+        ew=c+s
+print(rt.count(2)*2)
