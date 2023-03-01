@@ -1,0 +1,21 @@
+k=str(input())
+m=str(input())
+l=k.split()
+t=m.split()
+w=int(l[0])
+h=int(l[1])
+p=int(t[0])
+q=int(t[1])
+S=w*h
+s1=0
+if 2*q>h:
+    if 2*p>w:
+        s1=S
+    else:
+        s1=2*p*h
+else:
+    if 2*p>w:
+        s1=2*w*q
+    else:
+        s1=p*q*4
+print(s1)
