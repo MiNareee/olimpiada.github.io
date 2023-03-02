@@ -256,17 +256,22 @@ function alerted(){
 }
 ymaps.ready(function () {
     // Построение маршрута на общественном транспорте.
-    let BestT=alerted()
-    console.log(BestT)
+    
     let mymap = new ymaps.Map('map', {
         center: [55.751574, 37.573856],
-        zoom: 18,
+        zoom: 9,
         controls: ['largeMapDefaultSet']
     });
     
     // Создание экземпляра маршрута.
     let multiRoute = new ymaps.multiRouter.MultiRoute({
-        referencePoints: BestT,
+        referencePoints: [
+            [55.82860931692913,37.633890541622904],
+            [55.829850009160864,37.631803808229506],
+            [55.832174834112024,37.62803798677258],
+            [55.834389165122815,37.63000885528062],
+            [55.832930836923055,37.61880835822185],
+        ],
         params: {
             // Тип маршрута: на общественном транспорте.
             routingMode: "masstransit"  
@@ -280,6 +285,5 @@ ymaps.ready(function () {
     // Добавление маршрута на карту.
     mymap.geoObjects.add(multiRoute);
 });   
-
 
 
