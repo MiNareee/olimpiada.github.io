@@ -247,5 +247,37 @@ function alerted(){
 		}
 	}
 	console.log(mnTrass, bestT,TimeWR)
+	var lk=[]
+	for (let i=0;i<a.length;i++){
+		lk.push(fs[bestT[i]][3])
 }
+	return lk
+}
+ymaps.ready(function () {
+    // Построение маршрута на общественном транспорте.
+    let BestT=function alerted()
+    let mymap = new ymaps.Map('map', {
+        center: [55.751574, 37.573856],
+        zoom: 18,
+        controls: ['largeMapDefaultSet']
+    });
+    
+    // Создание экземпляра маршрута.
+    let multiRoute = new ymaps.multiRouter.MultiRoute({
+        referencePoints: BestT,
+        params: {
+            // Тип маршрута: на общественном транспорте.
+            routingMode: "masstransit"  
+        }
+    }, {
+        // Автоматически устанавливать границы карты так,
+        // чтобы маршрут был виден целиком.
+        boundsAutoApply: true
+    });
+
+    // Добавление маршрута на карту.
+    mymap.geoObjects.add(multiRoute);
+});   
+
+
 
