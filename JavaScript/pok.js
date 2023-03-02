@@ -127,7 +127,6 @@ function alerted(){
 	}
 	var a=distance(fs)
 	let s = a.length
-	console.log(s)
 	let A = 1
 	let B = 1
 	let ji = 0.64 
@@ -252,7 +251,6 @@ function alerted(){
 		lk.push(fs[bestT[i]][3])
 }
 	return lk
-	console.log(lk)
 }
 ymaps.ready(function () {
     // Построение маршрута на общественном транспорте.
