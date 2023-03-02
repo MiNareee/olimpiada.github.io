@@ -126,8 +126,8 @@ function alerted(){
 		fs.push(ltry[t])
 	}
 	var a=distance(fs)
-	console.log(a)
 	let s = a.length
+	console.log(s)
 	let A = 1
 	let B = 1
 	let ji = 0.64 
