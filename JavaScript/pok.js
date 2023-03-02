@@ -127,7 +127,7 @@ function alerted(){
 	}
 	console.log(fs)
 	var a=distance(fs)
-	let s = a.lenght+1
+	let s = a.length
 	let A = 1
 	let B = 1
 	let ji = 0.64 
