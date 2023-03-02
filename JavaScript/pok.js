@@ -184,7 +184,7 @@ function alerted(){
 						}
 					}
 				}
-				if (antROUTE.length!=5){
+				if (antROUTE.length!=s){
 					let isNotChosen = true
                                         while (isNotChosen){
 						var rand = Math.random()
