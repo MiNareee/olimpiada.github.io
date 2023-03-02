@@ -242,6 +242,6 @@ function alerted(){
 			}
 		}
 	}
-	return (mnTrass, bestT,TimeWR)
+	console.log(mnTrass, bestT,TimeWR)
 }
 
