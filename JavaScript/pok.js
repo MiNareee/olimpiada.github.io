@@ -125,6 +125,7 @@ function alerted(){
 		let t = checked[i]-1
 		fs.push(ltry[t])
 	}
+	console.log(fs)
 	var a=distance(fs)
 	let s = 5
 	let A = 1
