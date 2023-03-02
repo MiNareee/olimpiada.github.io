@@ -252,10 +252,12 @@ function alerted(){
 		lk.push(fs[bestT[i]][3])
 }
 	return lk
+	console.log(lk)
 }
 ymaps.ready(function () {
     // Построение маршрута на общественном транспорте.
     let BestT=function alerted()
+    console.log(BestT)
     let mymap = new ymaps.Map('map', {
         center: [55.751574, 37.573856],
         zoom: 18,
