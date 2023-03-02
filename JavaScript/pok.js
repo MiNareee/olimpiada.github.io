@@ -256,7 +256,7 @@ function alerted(){
 }
 ymaps.ready(function () {
     // Построение маршрута на общественном транспорте.
-    let BestT=function alerted()
+    let BestT=alerted()
     console.log(BestT)
     let mymap = new ymaps.Map('map', {
         center: [55.751574, 37.573856],
