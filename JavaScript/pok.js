@@ -257,8 +257,7 @@ function alerted(){
 		lktr.push(fs[bestT[okl]][3])
 	
         }
-	console.log(lktr)
-	ymaps.ready(function () {   
+	console.log(lktr) 
     // Создание экземпляра маршрута.
     let multiRoute = new ymaps.multiRouter.MultiRoute({
         referencePoints: lktr,
@@ -274,8 +273,8 @@ function alerted(){
 
     // Добавление маршрута на карту.
     mymap.geoObjects.add(multiRoute);
-});   
 }
+})
 
 
 
