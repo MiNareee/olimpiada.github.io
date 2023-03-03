@@ -252,34 +252,7 @@ function alerted(){
 }
 	return lk
 }
-if (alerted()!=undefined){
-ymaps.ready(function () {
-    // Построение маршрута на общественном транспорте.
-	let BestT=lk
-    let mymap = new ymaps.Map('map', {
-        center: [55.751574, 37.573856],
-        zoom: 18,
-        controls: ['largeMapDefaultSet']
-    });
-    
-    // Создание экземпляра маршрута.
-    let multiRoute = new ymaps.multiRouter.MultiRoute({
-        referencePoints: BestT,
-			  
-        params: {
-            // Тип маршрута: на общественном транспорте.
-            routingMode: "masstransit"  
-        }
-    }, {
-        // Автоматически устанавливать границы карты так,
-        // чтобы маршрут был виден целиком.
-        boundsAutoApply: true
-    });
 
-    // Добавление маршрута на карту.
-    mymap.geoObjects.add(multiRoute);
-})	
-}
 
 
 
