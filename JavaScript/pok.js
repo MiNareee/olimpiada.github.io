@@ -249,8 +249,33 @@ function alerted(){
 	console.log(mnTrass, bestT,TimeWR)
 	for (let okl=0;okl<s;okl++){
 		lktr.push(fs[bestT[okl]][3])
-	console.log(lktr)
+	
         }
+	console.log(lktr)
+	ymaps.ready(function () {
+    // Построение маршрута на общественном транспорте.
+    let mymap = new ymaps.Map('map', {
+        center: [55.751574, 37.573856],
+        zoom: 9,
+        controls: ['largeMapDefaultSet']
+    });
+    
+    // Создание экземпляра маршрута.
+    let multiRoute = new ymaps.multiRouter.MultiRoute({
+        referencePoints: lktr,
+        params: {
+            // Тип маршрута: на общественном транспорте.
+            routingMode: "masstransit"  
+        }
+    }, {
+        // Автоматически устанавливать границы карты так,
+        // чтобы маршрут был виден целиком.
+        boundsAutoApply: true
+    });
+
+    // Добавление маршрута на карту.
+    mymap.geoObjects.add(multiRoute);
+});   
 }
 
 
