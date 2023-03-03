@@ -114,7 +114,13 @@ function distance(a){
   }
   return Dict 
 }
-
+ymaps.ready(function () {
+    // Построение маршрута на общественном транспорте.
+    let mymap = new ymaps.Map('map', {
+        center: [55.751574, 37.573856],
+        zoom: 18,
+        controls: ['largeMapDefaultSet']
+    });
 function alerted(){
 	var checked = [];
 	$('input:checkbox:checked').each(function() {
@@ -270,14 +276,7 @@ function alerted(){
     mymap.geoObjects.add(multiRoute);
 });   
 }
-ymaps.ready(function () {
-    // Построение маршрута на общественном транспорте.
-    let mymap = new ymaps.Map('map', {
-        center: [55.751574, 37.573856],
-        zoom: 9,
-        controls: ['largeMapDefaultSet']
-    });
-})
+
 
 
 
