@@ -250,7 +250,9 @@ function alerted(){
 	for (let i=0;i<a.length;i++){
 		lk.push(fs[bestT[i]][3])
 }
-
+	return lk
+}
+if (alerted()!=undefined){
 ymaps.ready(function () {
     // Построение маршрута на общественном транспорте.
 	let BestT=lk
@@ -278,7 +280,6 @@ ymaps.ready(function () {
     mymap.geoObjects.add(multiRoute);
 })	
 }
-
 
 
 
