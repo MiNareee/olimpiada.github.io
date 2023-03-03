@@ -136,6 +136,7 @@ function alerted(){
 	let ant=10
 	let mnTrass = 1000000000000
 	var bestT = []
+	var lktr= []
 	let TimeAll=[['Пн', '12:00-18:00'],['Вт','12:00-18:00'],['Ср', '10:00-19:00'],['Чт', '12:00-18:00'],['Пт', '14:00-21:00'],['Сб', 'выходной'],['Вс','выходной']]
 	let Time=['Пн', '14:20']
 	var mas = new Array(s);
@@ -246,7 +247,6 @@ function alerted(){
 		}
 	}
 	console.log(mnTrass, bestT,TimeWR)
-	var lktr=[]
 	for (let okl=0;okl<s;okl++){
 		lktr.push(fs[bestT[okl]][3])
 	console.log(lktr)
