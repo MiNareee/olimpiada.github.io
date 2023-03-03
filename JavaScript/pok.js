@@ -246,12 +246,12 @@ function alerted(){
 		}
 	}
 	console.log(mnTrass, bestT,TimeWR)
-	var lk=[]
-	for (let i=0;i<a.length;i++){
-		lk.push(fs[bestT[i]][3])
-}
-	return lk
-	console.log(lk)
+	var lktr=[]
+	for (let okl=0;okl<s;okl++){
+		lktr.push(fs[bestT[okl]][3])
+        }
+	return lktr
+	console.log(lktr)
 }
 
 
