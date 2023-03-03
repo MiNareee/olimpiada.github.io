@@ -251,6 +251,7 @@ function alerted(){
 		lk.push(fs[bestT[i]][3])
 }
 	return lk
+	console.log(lk)
 }
 
 
