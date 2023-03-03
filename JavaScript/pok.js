@@ -252,14 +252,7 @@ function alerted(){
 	
         }
 	console.log(lktr)
-	ymaps.ready(function () {
-    // Построение маршрута на общественном транспорте.
-    let mymap = new ymaps.Map('map', {
-        center: [55.751574, 37.573856],
-        zoom: 9,
-        controls: ['largeMapDefaultSet']
-    });
-    
+	ymaps.ready(function () {   
     // Создание экземпляра маршрута.
     let multiRoute = new ymaps.multiRouter.MultiRoute({
         referencePoints: lktr,
@@ -277,7 +270,14 @@ function alerted(){
     mymap.geoObjects.add(multiRoute);
 });   
 }
-
+ymaps.ready(function () {
+    // Построение маршрута на общественном транспорте.
+    let mymap = new ymaps.Map('map', {
+        center: [55.751574, 37.573856],
+        zoom: 9,
+        controls: ['largeMapDefaultSet']
+    });
+})
 
 
 
