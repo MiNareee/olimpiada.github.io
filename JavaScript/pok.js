@@ -250,8 +250,15 @@ function alerted(){
 	for (let i=0;i<a.length;i++){
 		lk.push(fs[bestT[i]][3])
 }
-	ymaps.ready(function () {
-    // Построение маршрута на общественном транспорте.
+
+return lk	
+}
+ymaps.ready(function () {
+    let mymap = new ymaps.Map('map', {
+        center: [55.751574, 37.573856],
+        zoom: 18,
+        controls: ['largeMapDefaultSet']
+    })
     let BestT=lk
     console.log(BestT)
     let multiRoute = new ymaps.multiRouter.MultiRoute({
@@ -268,15 +275,7 @@ function alerted(){
 
     // Добавление маршрута на карту.
     mymap.geoObjects.add(multiRoute);
-})   
-	
-}
-ymaps.ready(function () {
-    let mymap = new ymaps.Map('map', {
-        center: [55.751574, 37.573856],
-        zoom: 18,
-        controls: ['largeMapDefaultSet']
-    })
+});   
 })   
 
 
