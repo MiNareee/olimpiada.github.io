@@ -252,7 +252,7 @@ function alerted(){
 }
 	ymaps.ready(function () {
     // Построение маршрута на общественном транспорте.
-    let BestT=alerted()
+    let BestT=lk
     console.log(BestT)
     let multiRoute = new ymaps.multiRouter.MultiRoute({
         referencePoints: BestT,
@@ -272,9 +272,6 @@ function alerted(){
 	
 }
 ymaps.ready(function () {
-    // Построение маршрута на общественном транспорте.
-    let BestT=alerted()
-    console.log(BestT)
     let mymap = new ymaps.Map('map', {
         center: [55.751574, 37.573856],
         zoom: 18,
