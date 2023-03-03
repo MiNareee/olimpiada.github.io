@@ -249,9 +249,8 @@ function alerted(){
 	var lktr=[]
 	for (let okl=0;okl<s;okl++){
 		lktr.push(fs[bestT[okl]][3])
-        }
-	return lktr
 	console.log(lktr)
+        }
 }
 
 
