@@ -255,7 +255,6 @@ return lk
 }
 ymaps.ready(function () {
     // Построение маршрута на общественном транспорте.
-    let BestT=alerted()
     let mymap = new ymaps.Map('map', {
         center: [55.751574, 37.573856],
         zoom: 18,
@@ -264,7 +263,9 @@ ymaps.ready(function () {
     
     // Создание экземпляра маршрута.
     let multiRoute = new ymaps.multiRouter.MultiRoute({
-        referencePoints: BestT,
+        referencePoints: [[55.751574, 37.573856],
+			  [55.834386404565635,37.630000043150154]]
+			  
         params: {
             // Тип маршрута: на общественном транспорте.
             routingMode: "masstransit"  
