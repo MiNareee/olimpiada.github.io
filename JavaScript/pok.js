@@ -124,6 +124,7 @@ function alerted(){
 		let t = checked[i]-1
 		fs.push(ltry[t])
 	}
+	fs.unshift(['','','',[55.82626315161884,37.63755969721379]])
 	var a=distance(fs)
 	let s = a.length
 	let A = 1
