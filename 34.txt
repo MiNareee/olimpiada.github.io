@@ -159,3 +159,4 @@ for i in range(s):
 for k in range(s):
     from_city=int(antROUTE[k]) 
     P = (mas[k][from_city] ** A) * (d[k][from_city] ** B)
+https://stemkoski.github.io/AR-Examples/hole-ring.html
