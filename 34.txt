@@ -189,3 +189,4 @@ t - mm.min(t,a.m‘5)s
 
 =atn.max(t,m”w2)5
 
+<a-cylinder position="0 0 -1" color ='white' height='2' radius='2' wireframe='true' </a-cylinder>
