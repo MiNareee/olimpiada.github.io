@@ -1,4 +1,4 @@
-Какhttps://vc.ru/newtechaudit/353372-muravi-i-python-ishchem-samye-korotkie-puti
+HiКакhttps://vc.ru/newtechaudit/353372-muravi-i-python-ishchem-samye-korotkie-puti
 https://github.com/plushchaynikolay/ant_algorithm/blob/master/ant-algorithm.py
 
 
@@ -192,3 +192,4 @@ t - mm.min(t,a.m‘5)s
 <a-cylinder position="0 0 -1" color ='white' height='2' radius='2' wireframe='true' </a-cylinder>
 https://stemkoski.github.io/AR-Examples/
 https://stemkoski.github.io/AR-Examples/
+https://hacks.mozilla.org/2013/10/an-ar-game-technical-overview/
