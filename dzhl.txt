@@ -157,3 +157,4 @@ for (let fg=0; fg<Ages;fg++){
 }
 console.log(mnTrass, bestT,TimeWR)
 https://gamedevacademy.org/beginners-guide-to-a-frame-vr/
+https://dev.to/azure/how-to-build-a-webvr-game-with-a-frame-4ifg?_lrsc=c5227773-3831-473b-9933-309f015f2be8
