@@ -234,7 +234,7 @@ function alerted(){
                         for (yt=0; yt<TimeWR.lenght; yt++){
 				Sumr=Sumr+TimeWR[yt]
 			}
-                        if  ((dsd<mnTrass) && (Sumr<=TimeOclc(TimeAll,Time))){
+                        if  ((dsd<mnTrass) && (Sumr<=TimeOclock(TimeAll,Time))){
 				mnTrass=dsd
 				bestT=Trass             
 			}
