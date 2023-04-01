@@ -137,17 +137,8 @@ function alerted(){
 	let mnTrass = 1000000000000
 	var bestT = []
 	var lktr= []
-	//var days = ['Воскресенье','Понедельник','Вторник', 'Среда','Четверг', 'Пятница','Суббота'];
-	//var d = new Date();
-	//var n = d.getDay();
-	//let DayWek=String(days[n]);
-	//let Data = new Date();
-	//let Hour = Data.getHours();
-	//let Minutes = Data.getMinutes();
-	//let Tr = String(Hour)+':'+ String(Minutes)
-	//var Time = []
-	//Time.push(DayWek)
-	//Time.push(Tr) -->
+	let TimeAll=['ежедневно','12:00-18:00']
+	let Time=['Вт', '14:20']
 	var mas = new Array(s);
 	for (var i = 0; i < mas.length; i++) {
 		mas[i] = new Array();
@@ -236,14 +227,22 @@ function alerted(){
                                 dsd=dsd+a[fr][fr1]
 			}
 			console.log(Trass)
-                        if  ((dsd<mnTrass)){
+                        let tic=dsd/50*60
+                        TimeW=tic
+                        TimeWR.push(TimeW)
+                        let Sumr=0
+                        for (yt=0; yt<TimeWR.lenght; yt++){
+				Sumr=Sumr+TimeWR[yt]
+			}
+                        if  ((dsd<mnTrass) && (Sumr<=TimeOclc(TimeAll,Time))){
 				mnTrass=dsd
 				bestT=Trass             
 			}
                         let L=q/dsd
                         for (klo=0;klo<(td[i].length);klo++){
-				mas[fr][fr1]=mas[fr][fr1]+L
-                                mas[fr1][fr]=mas[fr1][fr]+L
+				if (Sumr<=TimeOclc(TimeAll,Time)){
+					mas[fr][fr1]=mas[fr][fr1]+L
+                                        mas[fr1][fr]=mas[fr1][fr]+L
 				}
 			}
 		}
@@ -278,7 +277,6 @@ function alerted(){
     mymap.geoObjects.add(multiRoute);
 		})
 }
-
 
 
 
