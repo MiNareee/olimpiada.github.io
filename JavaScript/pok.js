@@ -243,15 +243,14 @@ function alerted(){
                         for (yt=0; yt<TimeWR.lenght; yt++){
 				Sumr=Sumr+TimeWR[yt]
 			}
-                        if  ((dsd<mnTrass) && (Sumr<=TimeOclc(TimeAll,Time))){
+                        if  ((dsd<mnTrass)){
 				mnTrass=dsd
 				bestT=Trass             
 			}
                         let L=q/dsd
                         for (klo=0;klo<(td[i].length);klo++){
-				if (Sumr<=TimeOclc(TimeAll,Time)){
-					mas[fr][fr1]=mas[fr][fr1]+L
-                                        mas[fr1][fr]=mas[fr1][fr]+L
+				mas[fr][fr1]=mas[fr][fr1]+L
+                                mas[fr1][fr]=mas[fr1][fr]+L
 				}
 			}
 		}
