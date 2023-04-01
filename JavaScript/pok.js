@@ -62,28 +62,28 @@ var ltry=[[1, 'Фонтан Дружбы народов', 'Главный фон
 [61, 'Гаража особого назначения ФСО России', 'В музее представлены легендарные машины лидеров Российской империи, Советского Союза и Российской Федерации.', [55.83595467350419,37.622379542991666], ['Пн: Выходной','Вт — Вс: 11:00 — 20:00'],'30', 'https://a.d-cd.net/8UDSaqDN0EftPfnqSt9kbr4BeDU-1920.jpg', 'Входной билет: от 550 руб.Льготный билет: от 300 руб.'],
 [62, 'Центр национальных конных традиций', 'Центр национальных конных традиций – это уникальная площадка мирового уровня для демонстрации конного достояния России, где гармонично сочетается спорт, культура, образование, коневодство и туризм.', [55.83827921235873,37.623388367754984], ['Пн: Выходной','Вт — Вс: 11:00 — 20:00'],'30', 'https://i.timeout.ru/pix/441731.jpeg', 'Стандарт: от 560.Есть льготы'],
 [63, 'Городская ферма', 'Не покидая пределов Москвы, здесь в любую погоду можно скрыться от городской суеты и познакомиться с фермерской жизнью, традициями и симпатичными, ухоженными обитателями, наполнить день радостью творчества на семейном мастер-классе или оценить обеденное меню в кафе «Ферма».', [55.840198954853165,37.627411094392876], ['Пн-Пт: 10:30 — 19:00','Сб, Вс: 10:30 — 20:00'],'30', 'https://madeinfuture.ru/img/174/ferma-vdnh2.jpg', 'Пн-Пт: от 600 руб.Есть льготы']]
-function TimeOclc(TimeAll, Time) {
-  let t = String(Time[1])
+function TimeOclock(Time,TimeAll){
+  let t=String(Time[1])
   let times = Number(t.slice(0, 2)) * 60 + Number(t.slice(3, 5))
-  for (let i = 0;i< TimeAll.length; i++){
-    if (TimeAll[i][0] == Time[0]) {
-      var indices = i
+  if (TimeAll[0]=='ежедневно'){
+    Times=TimeAll[1]
+  }else{
+  let indices = TimeAll.indexOf(Time[0])
+  let indicesTime = indices+1
+  let Times = TimeAll[indicesTime]
+  }
+  if (Times=='выходной'){
+    return ('Сегодня вы не сможете попасть в точку')
+  }
+  else{
+    let time1 = Number(Times.slice(0, 2)) * 60 + Number(Times.slice(3, 5)) 
+    let time2 = Number(Times.slice(6, 8)) * 60 + Number(Times.slice(9, 11))
+    if (((time1 <= times) && (times <= time2))||((time1 <= times+30) && (times <= time2))){
+      return time2 - times
+    }else{
+      return ('Не получится всё посетить')
     }
   }
-  let s = String(indices)
-  let win1 = TimeAll[indices][0]
-  let win2 = TimeAll[indices][1]
-  if (win1 == 'выходной') {
-    return false
-  } else {
-    let time1 = Number(win2.slice(0, 2)) * 60 + Number(win2.slice(3, 5))
-    let time2 = Number(win2.slice(6, 8)) * 60 + Number(win2.slice(9, 11))
-    if ((time1 <= times) && (times <= time2)) {
-      return time2 - times
-    } else {
-      return false
-    } 
-  }   
 }
 function distance(a){ 
   var d=[] 
@@ -137,8 +137,17 @@ function alerted(){
 	let mnTrass = 1000000000000
 	var bestT = []
 	var lktr= []
-	let TimeAll=[['Пн', '12:00-18:00'],['Вт','12:00-18:00'],['Ср', '10:00-19:00'],['Чт', '12:00-18:00'],['Пт', '14:00-21:00'],['Сб', 'выходной'],['Вс','выходной']]
-	let Time=['Пн', '14:20']
+	var days = ['Воскресенье','Понедельник','Вторник', 'Среда','Четверг', 'Пятница','Суббота'];
+	var d = new Date();
+	var n = d.getDay();
+	let DayWek=String(days[n]);
+	let Data = new Date();
+	let Hour = Data.getHours();
+	let Minutes = Data.getMinutes();
+	let Tr = String(Hour)+':'+ String(Minutes)
+	var Time = []
+	Time.push(DayWek)
+	Time.push(Tr)
 	var mas = new Array(s);
 	for (var i = 0; i < mas.length; i++) {
 		mas[i] = new Array();
