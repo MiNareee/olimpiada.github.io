@@ -137,17 +137,17 @@ function alerted(){
 	let mnTrass = 1000000000000
 	var bestT = []
 	var lktr= []
-	<--! var days = ['Воскресенье','Понедельник','Вторник', 'Среда','Четверг', 'Пятница','Суббота'];
-	var d = new Date();
-	var n = d.getDay();
-	let DayWek=String(days[n]);
-	let Data = new Date();
-	let Hour = Data.getHours();
-	let Minutes = Data.getMinutes();
-	let Tr = String(Hour)+':'+ String(Minutes)
-	var Time = []
-	Time.push(DayWek)
-	Time.push(Tr) -->
+	//var days = ['Воскресенье','Понедельник','Вторник', 'Среда','Четверг', 'Пятница','Суббота'];
+	//var d = new Date();
+	//var n = d.getDay();
+	//let DayWek=String(days[n]);
+	//let Data = new Date();
+	//let Hour = Data.getHours();
+	//let Minutes = Data.getMinutes();
+	//let Tr = String(Hour)+':'+ String(Minutes)
+	//var Time = []
+	//Time.push(DayWek)
+	//Time.push(Tr) -->
 	var mas = new Array(s);
 	for (var i = 0; i < mas.length; i++) {
 		mas[i] = new Array();
