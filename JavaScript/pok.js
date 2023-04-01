@@ -71,7 +71,7 @@ function TimeOclock(Time,TimeAll){
   }else{
   let indices = TimeAll.indexOf(Time[0])
   let indicesTime = indices+1
-  let Times = TimeAll[indicesTime]
+  Times = TimeAll[indicesTime]
   }
   if (Times=='выходной'){
     return ('Сегодня вы не сможете попасть в точку')
