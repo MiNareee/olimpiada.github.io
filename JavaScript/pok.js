@@ -240,7 +240,7 @@ function alerted(){
 			}
                         let L=q/dsd
                         for (klo=0;klo<(td[i].length);klo++){
-				if (Sumr<=TimeOclc(TimeAll,Time)){
+				if (Sumr<=TimeOclock(TimeAll,Time)){
 					mas[fr][fr1]=mas[fr][fr1]+L
                                         mas[fr1][fr]=mas[fr1][fr]+L
 				}
