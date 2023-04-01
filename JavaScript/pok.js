@@ -137,7 +137,7 @@ function alerted(){
 	let mnTrass = 1000000000000
 	var bestT = []
 	var lktr= []
-	var days = ['Воскресенье','Понедельник','Вторник', 'Среда','Четверг', 'Пятница','Суббота'];
+	<--! var days = ['Воскресенье','Понедельник','Вторник', 'Среда','Четверг', 'Пятница','Суббота'];
 	var d = new Date();
 	var n = d.getDay();
 	let DayWek=String(days[n]);
@@ -147,7 +147,7 @@ function alerted(){
 	let Tr = String(Hour)+':'+ String(Minutes)
 	var Time = []
 	Time.push(DayWek)
-	Time.push(Tr)
+	Time.push(Tr) -->
 	var mas = new Array(s);
 	for (var i = 0; i < mas.length; i++) {
 		mas[i] = new Array();
@@ -236,13 +236,6 @@ function alerted(){
                                 dsd=dsd+a[fr][fr1]
 			}
 			console.log(Trass)
-                        let tic=dsd/50*60
-                        TimeW=tic
-                        TimeWR.push(TimeW)
-                        let Sumr=0
-                        for (yt=0; yt<TimeWR.lenght; yt++){
-				Sumr=Sumr+TimeWR[yt]
-			}
                         if  ((dsd<mnTrass)){
 				mnTrass=dsd
 				bestT=Trass             
