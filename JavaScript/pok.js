@@ -235,8 +235,9 @@ function alerted(){
 				fr1=td[i][j+1]
                                 dsd=dsd+a[fr][fr1]
 			}
+			console.log(Trass)
                         let tic=dsd/50*60
-                        TimeW=tic+30*s
+                        TimeW=tic
                         TimeWR.push(TimeW)
                         let Sumr=0
                         for (yt=0; yt<TimeWR.lenght; yt++){
