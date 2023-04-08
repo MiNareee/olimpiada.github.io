@@ -129,7 +129,7 @@ function alerted(){
 	var a=distance(fs)
 	let s = a.length
 	let A = 1
-	let B = 1,5
+	let B = 1.5
 	let ji = 0.64 
 	var d = []
 	let Ages = 100
