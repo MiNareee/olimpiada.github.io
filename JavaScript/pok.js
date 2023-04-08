@@ -172,7 +172,7 @@ function alerted(){
 			for (let k=0; k<s;k++){
 				let Sum = 0 
 				for (let lfg=0; lfg<a[from_city].length;lfg++){
-					if (antROUTE.indexOf(lfg)==-1){
+					if (antROUTE.indexOf(lfg)==1){
 						Sum=Sum+(a[from_city][lfg]**B*(mas[from_city][lfg])**A)
 					}
 				}
