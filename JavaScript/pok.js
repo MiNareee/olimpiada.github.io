@@ -120,16 +120,18 @@ function alerted(){
 	$('input:checkbox:checked').each(function() {
 	checked.push($(this).val());
 	});
+	console.log(checked)
 	var fs=[]
 	for(let i=0;i<checked.length;i++){
 		let t = checked[i]-1
 		fs.push(ltry[t])
 	}
 	fs.unshift(['','','',[55.82626315161884,37.63755969721379]])
+	console.log(fs)
 	var a=distance(fs)
 	let s = a.length
 	let A = 1
-	let B = 1.5
+	let B = 1.6
 	let ji = 0.64 
 	var d = []
 	let Ages = 100
@@ -227,7 +229,6 @@ function alerted(){
 				fr1=td[i][j+1]
                                 dsd=dsd+a[fr][fr1]
 			}
-			console.log(Trass)
                         let tic=dsd/50*60
                         TimeW=tic
                         TimeWR.push(TimeW)
