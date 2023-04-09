@@ -176,10 +176,9 @@ function alerted(){
 						Sum=Sum+(a[from_city][lfg]**B*(mas[from_city][lfg])**A)
 					}
 				}
-				if (k!=from_city){
-				  kf.push(Sum)
-				}else{
-				  kf.push(0)
+				kf.push(Sum)
+				if (kf.length>s){
+				  kf.pop()
 				}
 				for (let j=0; j<a[from_city].length;j++){
 					if (antROUTE.indexOf(j)==-1){
