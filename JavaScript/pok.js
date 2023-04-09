@@ -159,7 +159,7 @@ function alerted(){
 		}
 		for (let o=0; o<ant;o++){
 			var kf = []
-			kf.push(0)
+			let t=-1
 			var antROUTE=[]
 			let from_city=0
 			let t=-1
@@ -179,9 +179,16 @@ function alerted(){
 						Sum=Sum+(a[from_city][lfg]**B*(mas[from_city][lfg])**A)
 					}
 				}
-			       kf.push(Sum)
-			       if (kf.length>s){
-				 kf.pop()
+			       	t=t+1
+				if (t!=from_city){
+				kf.push(Sum)
+				}else{
+				  kf.push(0)
+				  kf.push(Sum)
+				}
+				if (kf.length>s){
+				  kf.pop()
+				}
 				for (let j=0; j<a[from_city].length;j++){
 					if (antROUTE.indexOf(j)==-1){
 						let lk=a[from_city][j]**B*(mas[from_city][j])**A
