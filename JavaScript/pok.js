@@ -131,7 +131,7 @@ function alerted(){
 	var a=distance(fs)
 	let s = a.length
 	let A = 1
-	let B = 1.6
+	let B = 1
 	let ji = 0.64 
 	var d = []
 	let Ages = 100
@@ -159,8 +159,6 @@ function alerted(){
 		}
 		for (let o=0; o<ant;o++){
 			var kf = []
-			kf.push(0)
-			let t=-1
 			var antROUTE=[]
 			let from_city=0
 			antROUTE.push(from_city)
@@ -176,7 +174,7 @@ function alerted(){
 				
 				for (let lfg=0; lfg<a[from_city].length;lfg++){
 					if (antROUTE.indexOf(lfg)==-1){
-						Sum=Sum+(a[from_city][lfg]**B*(mas[from_city][lfg])**A)
+						Sum=Sum+((10000-a[from_city][lfg])**B*(mas[from_city][lfg])**A)
 					}
 				}
 			       //	t=t+1
@@ -187,12 +185,9 @@ function alerted(){
 				//  kf.push(Sum)
 				//}
 				kf.push(Sum)
-				if (kf.length>s){
-				  kf.pop()
-				}
 				for (let j=0; j<a[from_city].length;j++){
 					if (antROUTE.indexOf(j)==-1){
-						let lk=a[from_city][j]**B*(mas[from_city][j])**A
+						let lk=(10000-a[from_city][j])**B*(mas[from_city][j])**A
 						if (kf[k]!=0){
 							Zero[from_city][j]=lk/kf[k]
 						}else{
