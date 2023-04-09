@@ -158,9 +158,13 @@ function alerted(){
 			}
 		}
 		for (let o=0; o<ant;o++){
-			var kf=[]
+			var kf = new Array(s)
+			for (var i = 0; i < kf.length; i++) {
+			  kf[i] = -1
+			}
 			var antROUTE=[]
 			let from_city=0
+			let t=-1
 			antROUTE.push(from_city)
 			var Zero = new Array(s)
 			for (var i = 0; i < s; i++) {
@@ -171,14 +175,23 @@ function alerted(){
 			}
 			for (let k=0; k<s;k++){
 				let Sum = 0 
+				kf[from_city]=0
 				for (let lfg=0; lfg<a[from_city].length;lfg++){
 					if (antROUTE.indexOf(lfg)==-1){
 						Sum=Sum+(a[from_city][lfg]**B*(mas[from_city][lfg])**A)
 					}
 				}
-				kf.push(Sum)
-				if (kf.length>s){
-				  kf.pop()
+				//kf.push(Sum)
+				//if (kf.length>s){
+				 // kf.pop()
+				t=t+1
+				if (t!=s){
+				if (kf[t]==-1){
+				  kf[t]=Sum
+				}else{
+				  kf[t+1]=Sum
+				  
+				}
 				}
 				for (let j=0; j<a[from_city].length;j++){
 					if (antROUTE.indexOf(j)==-1){
