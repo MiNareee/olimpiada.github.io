@@ -162,7 +162,6 @@ function alerted(){
 			let t=-1
 			var antROUTE=[]
 			let from_city=0
-			let t=-1
 			antROUTE.push(from_city)
 			var Zero = new Array(s)
 			for (var i = 0; i < s; i++) {
