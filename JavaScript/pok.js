@@ -134,9 +134,9 @@ function alerted(){
 	let B = 1
 	let ji = 0.64 
 	var d = []
-	let Ages = 100
+	let Ages = 1000
 	let q = 8
-	let ant=10
+	let ant=25
 	let mnTrass = 1000000000000
 	var bestT = []
 	var lktr= []
@@ -174,7 +174,7 @@ function alerted(){
 				
 				for (let lfg=0; lfg<a[from_city].length;lfg++){
 					if (antROUTE.indexOf(lfg)==-1){
-						Sum=Sum+((10000-a[from_city][lfg])**B*(mas[from_city][lfg])**A)
+						Sum=Sum+((100000-a[from_city][lfg])**B*(mas[from_city][lfg])**A)
 					}
 				}
 			       //	t=t+1
@@ -187,7 +187,7 @@ function alerted(){
 				kf.push(Sum)
 				for (let j=0; j<a[from_city].length;j++){
 					if (antROUTE.indexOf(j)==-1){
-						let lk=(10000-a[from_city][j])**B*(mas[from_city][j])**A
+						let lk=(100000-a[from_city][j])**B*(mas[from_city][j])**A
 						if (kf[k]!=0){
 							Zero[from_city][j]=lk/kf[k]
 						}else{
