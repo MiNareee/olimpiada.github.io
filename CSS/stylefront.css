@@ -193,12 +193,12 @@ flex-wrap: wrap;
 .nav-main_item:last-child{
   margin-right:0px
 }
-/*.headers{*/
- */ position: fixed;*/
- */ top: 0;*/
-  */left:0;*/
-*/  width: 100%;*/
-*/}*/
+.headers{
+ position: fixed;
+ top: 0;
+ left:0;
+width: 100%;
+}
 .nav-main_link:hover, .nav-main_link:focus,.nav-main_link:active{
   opacity:75%
 }
