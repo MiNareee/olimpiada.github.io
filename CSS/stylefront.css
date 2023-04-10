@@ -145,5 +145,8 @@ height: 90px;
 display: flex;
 flex-wrap: wrap;
 }
+.nav-main_item:last-child{
+  margin-right:0px
+}
 
   
