@@ -129,5 +129,9 @@ body{
   font-weight: normal;
   color:#FFFFFF;
 }
-  
+.container{
+  mix-width:1060px;
+  margin: 0 auto;
+}
+
   
