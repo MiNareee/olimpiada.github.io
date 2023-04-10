@@ -121,3 +121,13 @@ html{
 *,*::before,*::after{
   box-sizing: inherit;
 }
+body{
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-size: 20px;
+  line-height:1,2;
+  font-weight: normal;
+  color:#FFFFFF;
+}
+  
+  
