@@ -130,7 +130,9 @@ body{
   color:#FFFFFF;
 }
 .header{
-text-align: center 
+max-width: 1060px;
+margin-left: auto;
+margin-right: auto
 }
 .nav-main_item{
    margin-right:67px
