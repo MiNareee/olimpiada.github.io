@@ -158,6 +158,6 @@ flex-wrap: wrap;
 .intro{
 width: 1920px;
 height: 800px;
-background: url(/img/Обложка.png) 
+ background-image: url(/img/Обложка.png) 
 }
   
