@@ -208,7 +208,7 @@ width: 1845px;
 height: 800px;
  background-image: url(../img/Обложка.png) 
 }
-intro_title{
+.intro_title{
 position: absolute;
 width: 685px;
 height: 171px;
