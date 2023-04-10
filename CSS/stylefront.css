@@ -130,9 +130,7 @@ body{
   color:#FFFFFF;
 }
 .header{
-position: absolute;
-width: 637px;
-height: 90px;
+text-align: center 
 }
 .nav-main_item{
    margin-right:67px
