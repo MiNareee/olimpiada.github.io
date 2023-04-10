@@ -133,5 +133,11 @@ body{
   mix-width:1060px;
   margin: 0 auto;
 }
+.header{
+position: absolute;
+width: 637px;
+height: 90px;
+}
+  
 
   
