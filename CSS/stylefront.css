@@ -150,5 +150,8 @@ flex-wrap: wrap;
   left:0;
   width: 100%;
 }
+.nav-main_link:hover, .nav-main_link:focus,.nav-main_link:active{
+  opacity:75%
+}
 
   
