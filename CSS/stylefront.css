@@ -196,7 +196,7 @@ flex-wrap: wrap;
 .headers{
  position: fixed;
  top: 0;
- left:0;
+ left: 960;
 width: 100%;
 }
 .nav-main_link:hover, .nav-main_link:focus,.nav-main_link:active{
