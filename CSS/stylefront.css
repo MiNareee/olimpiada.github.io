@@ -197,6 +197,7 @@ width: 100%;
 }
 .nav-main_link{
 	color:#FFFFFF;
+	text-decoration: none;
 }
 .nav-main_link:hover, .nav-main_link:focus,.nav-main_link:active{
   opacity:75%
