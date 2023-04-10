@@ -175,13 +175,8 @@ body{
   font-weight: normal;
   color:#FFFFFF;
 }
-.container{
-margin-left: auto;
-margin-right: auto;
-}
 .header{
 padding-top: 38px;
-text-align: center
 }
 .nav-main_item{
  margin-right:67px
@@ -189,6 +184,7 @@ text-align: center
 .nav-main_list{
 display: flex;
 flex-wrap: wrap;
+justify-content:center;
 }
 .nav-main_item:last-child{
   margin-right:0px
@@ -196,7 +192,7 @@ flex-wrap: wrap;
 .headers{
  position: fixed;
  top: 0;
- left: 960;
+ left: 0;
 width: 100%;
 }
 .nav-main_link:hover, .nav-main_link:focus,.nav-main_link:active{
@@ -207,4 +203,4 @@ width: 1850px;
 height: 800px;
  background-image: url(../img/Обложка.png) 
 }
-  
+
