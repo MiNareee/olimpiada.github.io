@@ -138,6 +138,12 @@ position: absolute;
 width: 637px;
 height: 90px;
 }
-  
+.nav-main_item{
+   margin-right:67px
+}
+.nav-main_list{
+display: flex;
+flex-wrap: wrap;
+}
 
   
